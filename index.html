@@ -14,7 +14,7 @@
     <div id="page">
 
         <div id="image-section"></div>
-        <div id="form-section">
+        <div id="form-section" >
             <div id="drag-handle">
                 <span>DRAG ME</span>
             </div>
@@ -47,12 +47,21 @@
                     <div class="field">
                         <label for="confirmPassword">Confirm password</label>
                         <input type="password" name="password" id="confirmPassword" placeholder="Confirm your password">
+                        <div class="field-meta">
+                            <div class="password-rules">
+                                <div data-rule="length">❌ At least 8 characters</div>
+                                <div data-rule="uppercase">❌ One uppercase letter</div>
+                                <div data-rule="number">❌ One number</div>
+                                <div data-rule="special">❌ One special character</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </form>
             <div id="footer">
-                <button type="submit" id="register">Register</button>
-                <span>Already have an account? <a href="https://example.com" class="text-link">Sign in</a></span>
+                <button type="submit" id="register"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Register</a></button>
+                <span>Already have an account? <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="text-link">Sign in</a></span>
             </div>
         </div>
     </div>

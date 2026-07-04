@@ -14,7 +14,6 @@ body {
     text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.25);
     font-family: "Inter", system-ui, sans-serif;
     font-weight: 400;
-
     letter-spacing: 0.2px;
 }
 
@@ -123,7 +122,7 @@ header {
 form {
     border-radius: 20px;
     padding-bottom: 50px;
-    padding-top: 150px;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -133,14 +132,50 @@ form {
 
 #inputs {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 3fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
 }
 
 .field {
     display: flex;
     flex-direction: column;
+    position: relative;
     flex: 1 1 300px;
+}
+
+.field::after {
+    content: "❌";
+    position: absolute;
+    right: 10px;
+    top: 28px;
+    font-size: 1.1rem;
+    transition: .2s;
+}
+
+.field.valid::after {
+    content: "✅";
+}
+
+.field.valid input {
+    box-shadow: 0 0 0 3px rgba(0, 255, 120, 0.25),
+    0 0 20px rgba(0, 255, 120, 0.15);
+    border: 1px solid rgba(0, 255, 120, 0.4);
+}
+
+.field.invalid input {
+    box-shadow: 0 0 0 3px rgba(255, 0, 80, 0.25),
+    0 0 20px rgba(255, 0, 80, 0.15);
+    border: 1px solid rgba(255, 0, 80, 0.4);
+    .field.invalid input {
+        animation: shake 0.2s ease;
+    }
+    @keyframes shake {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-2px); }
+        50% { transform: translateX(2px); }
+        75% { transform: translateX(-2px); }
+        100% { transform: translateX(0); }
+    }
 }
 
 input {
@@ -151,7 +186,7 @@ input {
     background: rgba(255, 255, 255, 0.35);
     color: #ffffff;
     backdrop-filter: blur(10px);
-    transition: all 0.2s ease;
+    transition: box-shadow 1s ease, border 1s ease;
     padding-left: 12px;
 }
 
@@ -193,6 +228,8 @@ button {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: all 0.25s ease;
+    user-select: none;
+
 }
 
 button:hover {
@@ -205,12 +242,21 @@ button:hover {
 a {
     color: white;
     transition: all 0.25s ease;
+    user-select: none;
+    text-decoration: none;
 
 }
 
 a:hover {
     background: rgba(255,255,255,0.14);
     border-color: rgba(255,255,255,0.35);
-
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    user-select: none;
+    text-decoration: none;
+}
+
+
+
+.password-rules {
+    padding-top: 20px;
 }
