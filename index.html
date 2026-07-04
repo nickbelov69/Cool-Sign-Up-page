@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sing up</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="page">
+
+        <div id="image-section"></div>
+        <div id="form-section">
+            <div id="drag-handle">
+                <span>DRAG ME</span>
+            </div>
+            <header>
+                <h2>Hey good lookin', let's register you!</h2>
+            </header>
+            <form>
+                <h2>Please fill the form below.</h2>
+                <div id="inputs">
+                    <div class="field">
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="name" id="firstName" placeholder="Nick">
+                    </div>
+                    <div class="field">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="name" id="lastName" placeholder="Nickerson">
+                    </div>
+                    <div class="field">
+                        <label for="email">Email address</label>
+                        <input type="email" name="email" id="email" placeholder="youremail@">
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="field">
+                        <label for="phoneNumber">Phone number</label>
+                        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone number">
+                    </div>
+                    <div class="field">
+                        <label for="confirmPassword">Confirm password</label>
+                        <input type="password" name="password" id="confirmPassword" placeholder="Confirm your password">
+                    </div>
+                </div>
+            </form>
+            <div id="footer">
+                <button type="submit" id="register">Register</button>
+                <span>Already have an account? <a href="https://example.com" class="text-link">Sign in</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
